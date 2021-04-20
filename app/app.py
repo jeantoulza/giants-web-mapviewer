@@ -1,5 +1,7 @@
+import sys
+sys.path.append("./dpnet")
 from giantslib.game.map import Map
-from flask import Flask, request, abort, Response, render_template
+from flask import Flask, request, abort, Response, render_template, redirect
 import os
 import random
 
@@ -15,6 +17,11 @@ maps = get_maps()
 @app.route("/map/<path:mapfile>")
 def get_map(mapfile):
     return render_template('view.html', mapfile=mapfile)
+
+
+@app.route("/")
+def get_home():
+    return redirect("/random")
 
 
 @app.route("/random")
