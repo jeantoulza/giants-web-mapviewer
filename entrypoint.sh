@@ -1,3 +1,2 @@
 #!/bin/bash
-cd app
-flask run
+FLASK_APP=app.app:app flask run
