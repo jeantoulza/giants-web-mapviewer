@@ -1,0 +1,20 @@
+html {
+    background-color: #111;
+}
+
+.title {
+    color:#666;
+    text-align:center;
+}
+.subtitle {
+    display:block;
+    margin-top: -10px;
+    text-align:center;
+    margin-bottom: 10px;
+}
+
+.colormap {
+    height:85vh;
+    display:block;
+    margin:auto;
+}

@@ -1,0 +1,3 @@
+[submodule "dpnet"]
+	path = dpnet
+	url = ssh://gogs@artolsheim.hipstercat.fr:22022/hipstercat/giantslib.git
