@@ -7,5 +7,6 @@ COPY entrypoint.sh /usr/app/
 
 RUN pip install Cython
 RUN pip install -r requirements.txt
+RUN pip install -r ../dpnet/requirements.txt
 
 ENTRYPOINT /usr/app/entrypoint.sh
