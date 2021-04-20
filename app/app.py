@@ -1,5 +1,5 @@
 import sys
-sys.path.append("../dpnet")
+sys.path.append("dpnet")
 from giantslib.game.map import Map
 from flask import Flask, request, abort, Response, render_template, redirect
 import os
