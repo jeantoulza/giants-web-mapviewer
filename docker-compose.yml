@@ -11,7 +11,7 @@ services:
       - "traefik.http.routers.giantsmaps.rule=Host(`giantsmaps.hipstercat.fr`)"
       - "traefik.http.routers.giantsmaps.entrypoints=websecure"
       - "traefik.http.routers.giantsmaps.middlewares=authelia"
-    publish:
+    ports:
       - 5789:80
     volumes:
       - ./maps:/usr/app/maps
