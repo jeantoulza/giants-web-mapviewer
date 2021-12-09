@@ -10,7 +10,7 @@ services:
       - "traefik.enable=true"
       - "traefik.http.routers.giantsmaps.rule=Host(`giantsmaps.hipstercat.fr`)"
       - "traefik.http.routers.giantsmaps.entrypoints=websecure"
-      # - "traefik.http.routers.giantsmaps.middlewares=authelia"
+      - "traefik.http.routers.giantsmaps.middlewares=authelia"
     ports:
       - 5789:80
     volumes:
