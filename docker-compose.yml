@@ -1,0 +1,22 @@
+version: "3"
+services:
+  app:
+    image: giants-web-mapviewer:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.giantsmaps.rule=Host(`giantsmaps.hipstercat.fr`)"
+      - "traefik.http.routers.giantsmaps.entrypoints=websecure"
+      - "traefik.http.routers.giantsmaps.middlewares=authelia"
+    publish:
+      - 5789:80
+    volumes:
+      - ./maps:/usr/app/maps
+    networks:
+      - web
+networks:
+  web:
+    external: true
