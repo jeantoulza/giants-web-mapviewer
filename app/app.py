@@ -30,8 +30,7 @@ def get_home():
 @app.route("/random")
 def get_random():
     mapfile = random.choice(maps)
-    return render_template('view.html', mapfile=mapfile)
-
+    return redirect(f"/map/{mapfile}")
 
 @app.route("/colormap/<path:mapfile>")
 def get_colormap(mapfile):
