@@ -3,7 +3,6 @@ WORKDIR /usr/app
 RUN pip install Cython
 
 COPY dpnet /usr/app/dpnet
-RUN pip install -r dpnet/requirements.txt
 
 COPY app /usr/app/app
 COPY requirements.txt /usr/app/
